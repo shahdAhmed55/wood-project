@@ -182,6 +182,7 @@ nav ul li img {
 .about-page .right-section .bottom .right {
   align-self: stretch;
   width: 50%;
+  height: 100%;
 }
 .about-page .right-section .up .right img,
 .about-page .right-section .bottom .right img {
