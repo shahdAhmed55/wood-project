@@ -40,7 +40,7 @@ for (let t of types) {
 
 let images = [
   "https://darkslateblue-partridge-873090.hostingersite.com/wp-content/uploads/2025/12/Modern-Minimalist-Chair.webp",
-  "https://darkslateblue-partridge-873090.hostingersite.com/wp-content/uploads/2025/12/Modern-Chair-Against-Textured-Background-2.webp",
+  "https://darkslateblue-partridge-873090.hostingersite.com/wp-content/uploads/2025/12/Elegant-Wooden-Chair-1.webp",
 ];
 
 let slidesContainer = document.querySelectorAll(".slide");
