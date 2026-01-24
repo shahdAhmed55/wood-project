@@ -39,8 +39,8 @@ for (let t of types) {
 }
 
 let images = [
-  "../../images/about/Modern-Leather-Armchair.webp",
-  "../../images/about/Modern-Leather-Chair-e1764684309550.webp",
+  "https://darkslateblue-partridge-873090.hostingersite.com/wp-content/uploads/2025/12/Modern-Minimalist-Chair.webp",
+  "https://darkslateblue-partridge-873090.hostingersite.com/wp-content/uploads/2025/12/Modern-Chair-Against-Textured-Background-2.webp",
 ];
 
 let slidesContainer = document.querySelectorAll(".slide");
