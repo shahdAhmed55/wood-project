@@ -1,0 +1,135 @@
+@use "./global/globals" as *;
+@use "./global/colors&effects" as *;
+@use "./global/nav&footer" as *;
+@use "../projectPages/styles/aboutUs" as *;
+@use "../projectPages/styles/contact" as *;
+@use "../projectPages/styles/texture" as *;
+
+.home-page {
+  height: 100vh;
+  @include centerElements;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  overflow: hidden;
+
+  .left-section {
+    background-color: black;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    background-image: url("../images/homePage/bg/Luxurious-Leather-Chair-e1764683478234-1-e1767452642404.webp");
+    @include backgroundSetting;
+    animation: chageBG infinite 20s ease;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+      width: 100%;
+    }
+  }
+  .right-section {
+    background-color: black;
+    width: 30%;
+    height: 100%;
+    .box {
+      border-radius: 10px;
+      padding: 30px;
+      background-image: url("../images/homePage/Elegant-Wooden-Chair-1.webp");
+      margin-bottom: 20px;
+      height: calc(100% / 3.14);
+      @include backgroundSetting;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      color: white;
+      transition: 1s;
+      h4 {
+        z-index: 1;
+      }
+      .btns {
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .see-more-btn {
+          color: white;
+          font-weight: bold;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 50%;
+            height: 2px;
+            background-color: white;
+            top: -2px;
+            right: 0;
+          }
+          &:hover {
+            ::after {
+              left: 0;
+            }
+          }
+        }
+        button {
+          cursor: pointer;
+          background-color: black;
+          color: white;
+          padding: 8px 15px;
+          border: 0;
+          border-bottom-right-radius: 100%;
+          border-top-left-radius: 100%;
+          transition: 0.5s;
+          font-size: 18px;
+          &:hover {
+            border-radius: 20px;
+          }
+        }
+      }
+      @media (max-width: 787px) {
+        height: 330px;
+      }
+    }
+    .box::after {
+      @include shadowEffect;
+      animation: changeShadow infinite ease 10s;
+    }
+  }
+  @media (max-width: 787px) {
+    flex-wrap: wrap;
+    height: 100%;
+    .left-section,
+    .right-section {
+      width: 100%;
+    }
+    .left-section {
+      height: 70vh;
+    }
+    .right-section {
+      padding-top: 15px;
+    }
+  }
+}
+
+@keyframes chageBG {
+  0%,
+  100% {
+    background-image: url("../images/homePage/bg/Modern-Leather-Chair-3-e1764696228217.webp");
+  }
+  50% {
+    background-image: url("../images/homePage/bg/Luxurious-Leather-Chair-e1764683478234-1-e1767452642404.jpg");
+  }
+}
+
+@keyframes changeShadow {
+  0%,
+  100% {
+    background-color: rgba(0, 0, 0, 0.194);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.574);
+  }
+}

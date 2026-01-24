@@ -1,0 +1,56 @@
+@mixin shadowEffect {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.194);
+}
+
+h1.title {
+  z-index: 1;
+  bottom: 5%;
+  color: white;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+@media (max-width: 787px) {
+  h1.title {
+    font-size: 45px;
+  }
+}
+
+@mixin h1AfterBefore {
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 3px;
+    //   top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(255, 226, 151, 0.709);
+  }
+  &::after {
+    bottom: -10px;
+  }
+  &::before {
+    top: -10px;
+  }
+}
+
+@mixin backgroundSetting {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+@mixin centerElements{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

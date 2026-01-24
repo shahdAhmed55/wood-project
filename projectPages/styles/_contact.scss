@@ -1,0 +1,173 @@
+@use "../../styles/global/colors&effects" as *;
+@use "../../styles/global/nav&footer" as *;
+.contact-page {
+  padding: 10px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  color: white;
+  .left-section {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    background-image: url("../../images/homePage/Modern-Chair-Against-Textured-Background-2.webp");
+    @include backgroundSetting;
+    border-radius: 10px;
+    overflow: hidden;
+    &::after {
+      @include shadowEffect;
+      animation: changeShadow infinite ease 10s;
+    }
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+    }
+    @media (max-width: 787px) {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+  .right-section {
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    .container {
+      align-self: stretch;
+      @include centerElements;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 217, 0, 0.17);
+      height: 95%;
+      padding-top:30px;
+      flex-direction: column;
+      width: 100%;
+      h1 {
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        color: rgba(255, 226, 151, 0.709);
+        margin-bottom: 30px;
+        &::after,
+        &::before {
+          position: absolute;
+          content: "";
+          width: 50px;
+          height: 3px;
+          //   top: 50%;
+          right: 50%;
+          transform: translateX(50%);
+          background-color: rgba(255, 226, 151, 0.709);
+        }
+        &::after {
+          bottom: -10px;
+        }
+        &::before {
+          top: -10px;
+        }
+      }
+      p {
+
+        margin-bottom: 30px;
+      }
+      form {
+        width: 100%;
+        color: white;
+        gap: 10px;
+        flex-wrap: wrap;
+        @include centerElements;
+
+        padding: 20px;
+        flex-direction: column;
+        div {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          label {
+            margin-bottom: 10px;
+          }
+          input,
+          textarea {
+            color: white;
+            outline: none;
+            padding: 10px;
+            background-color: black;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 217, 0, 0.17);
+            margin-bottom: 15px;
+          }
+          &:last-child {
+            // width: 91%;
+            textarea {
+              width: 100%;
+              height: 200px;
+            }
+          }
+        }
+
+        button {
+          padding: 15px 20px;
+          border: 1px solid rgba(88, 76, 10, 0.76);
+          color: white;
+          background-color: transparent;
+          border-radius: 10px;
+          //   width: 100%;
+          &:hover {
+            background-color: white;
+            color: rgb(95, 81, 0);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      color: white;
+      width: 98%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+    height: 100%;
+
+    .right-section {
+      margin-top: 30px;
+      width: 100%;
+      height: 100%;
+      .container {
+        margin-bottom: 30px;
+        border: 0;
+        padding: 0;
+        height: 100%;
+        h1 {
+          font-size: 30px;
+          margin-bottom: 20px;
+          &::after {
+            content: none;
+          }
+          &::before {
+            content: none;
+          }
+        }
+        p {
+          text-align: center;
+        }
+        form {
+          padding: 0;
+          div {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+          button {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}

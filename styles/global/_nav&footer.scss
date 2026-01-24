@@ -1,0 +1,36 @@
+nav {
+  z-index: 11;
+//   position: absolute;
+  padding: 20px 0;
+  ul {
+    display: flex;
+    gap: 20px;
+    // justify-content: center;
+    align-items: center;
+    li {
+      a {
+        color: white;
+        font-weight: bold;
+      }
+      &:first-child{
+        width: 10%;
+        @media (max-width:787px) {
+          width: 70%;
+        }
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+.footer {
+      border: 1px solid rgba(255, 217, 0, 0.17);
+      text-align: center;
+      padding: 15px;
+      font-size: 15px;
+      border-radius: 10px;
+    }

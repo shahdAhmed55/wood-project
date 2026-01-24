@@ -1,0 +1,759 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (min-width: 787px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+}
+body {
+  font-family: "Forum", Sans-serif;
+}
+
+h1.title {
+  z-index: 1;
+  bottom: 5%;
+  color: white;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+@media (max-width: 787px) {
+  h1.title {
+    font-size: 45px;
+  }
+}
+nav {
+  z-index: 11;
+  padding: 20px 0;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  font-weight: bold;
+}
+nav ul li:first-child {
+  width: 10%;
+}
+@media (max-width: 787px) {
+  nav ul li:first-child {
+    width: 70%;
+  }
+}
+nav ul li img {
+  width: 100%;
+}
+
+.footer {
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.about-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  overflow: hidden;
+}
+@media (max-width: 787px) {
+  .about-page {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
+.about-page .left-section {
+  width: 50%;
+  background-color: black;
+  position: relative;
+  height: 100%;
+  background-image: url("../../images/homePage/Elegant-Wooden-Chair-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-page .left-section::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.194);
+  animation: changeShadow infinite ease 10s;
+}
+.about-page .left-section .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+@media (max-width: 787px) {
+  .about-page .left-section {
+    width: 100%;
+    height: 70vh;
+  }
+}
+.about-page .right-section {
+  color: white;
+  width: 50%;
+  background-color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.about-page .right-section .slide {
+  transition: 0.5s;
+}
+.about-page .right-section .slide img {
+  transition: 0.5s;
+}
+.about-page .right-section .up,
+.about-page .right-section .mid,
+.about-page .right-section .bottom {
+  height: 31.6666666667%;
+}
+.about-page .right-section .up,
+.about-page .right-section .bottom {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.about-page .right-section .up .left,
+.about-page .right-section .bottom .left {
+  border-radius: 10px;
+  align-self: stretch;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  padding: 10px;
+  width: 50%;
+  align-content: center;
+}
+.about-page .right-section .up .left h1,
+.about-page .right-section .bottom .left h1 {
+  margin-bottom: 10px;
+  color: rgba(238, 183, 44, 0.709);
+}
+.about-page .right-section .up .right,
+.about-page .right-section .bottom .right {
+  align-self: stretch;
+  width: 50%;
+}
+.about-page .right-section .up .right img,
+.about-page .right-section .bottom .right img {
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+}
+@media (max-width: 787px) {
+  .about-page .right-section .up .left,
+  .about-page .right-section .up .right,
+  .about-page .right-section .bottom .left,
+  .about-page .right-section .bottom .right {
+    width: 100%;
+  }
+}
+.about-page .right-section .mid {
+  display: flex;
+  gap: 15px;
+}
+.about-page .right-section .mid .box {
+  width: 33.3333333333%;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+@media (max-width: 787px) {
+  .about-page .right-section .mid .box {
+    width: 100%;
+  }
+}
+@media (max-width: 1080px) {
+  .about-page .right-section .mid .box {
+    font-size: 13px;
+    text-align: center;
+  }
+  .about-page .right-section .mid .box .stars {
+    width: 15%;
+  }
+  .about-page .right-section .mid .box .stars img {
+    width: 100%;
+  }
+}
+.about-page .right-section .mid .box h2 {
+  color: rgba(238, 183, 44, 0.709);
+}
+.about-page .right-section .mid .box .stars {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+.about-page .right-section .bottom .left {
+  text-align: center;
+}
+.about-page .right-section .bottom .left h1 {
+  position: relative;
+}
+.about-page .right-section .bottom .left h1::after, .about-page .right-section .bottom .left h1::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(238, 183, 44, 0.709);
+}
+.about-page .right-section .bottom .left h1::after {
+  right: 10%;
+}
+.about-page .right-section .bottom .left h1::before {
+  left: 10%;
+}
+@media (max-width: 787px) {
+  .about-page .right-section {
+    width: 100%;
+  }
+}
+@media (max-width: 787px) {
+  .about-page .right-section .up,
+  .about-page .right-section .bottom,
+  .about-page .right-section .mid {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
+
+.contact-page {
+  padding: 10px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  color: white;
+}
+.contact-page .left-section {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  background-image: url("../../images/homePage/Modern-Chair-Against-Textured-Background-2.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contact-page .left-section::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.194);
+  animation: changeShadow infinite ease 10s;
+}
+.contact-page .left-section .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+@media (max-width: 787px) {
+  .contact-page .left-section {
+    width: 100%;
+    height: 70vh;
+  }
+}
+.contact-page .right-section {
+  position: relative;
+  width: 50%;
+  padding: 10px;
+}
+.contact-page .right-section .container {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  height: 95%;
+  padding-top: 30px;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-page .right-section .container h1 {
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  color: rgba(255, 226, 151, 0.709);
+  margin-bottom: 30px;
+}
+.contact-page .right-section .container h1::after, .contact-page .right-section .container h1::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(255, 226, 151, 0.709);
+}
+.contact-page .right-section .container h1::after {
+  bottom: -10px;
+}
+.contact-page .right-section .container h1::before {
+  top: -10px;
+}
+.contact-page .right-section .container p {
+  margin-bottom: 30px;
+}
+.contact-page .right-section .container form {
+  width: 100%;
+  color: white;
+  gap: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.contact-page .right-section .container form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-page .right-section .container form div label {
+  margin-bottom: 10px;
+}
+.contact-page .right-section .container form div input,
+.contact-page .right-section .container form div textarea {
+  color: white;
+  outline: none;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  margin-bottom: 15px;
+}
+.contact-page .right-section .container form div:last-child textarea {
+  width: 100%;
+  height: 200px;
+}
+.contact-page .right-section .container form button {
+  padding: 15px 20px;
+  border: 1px solid rgba(88, 76, 10, 0.76);
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.contact-page .right-section .container form button:hover {
+  background-color: white;
+  color: rgb(95, 81, 0);
+  transition: 0.5s;
+}
+.contact-page .right-section .footer {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 98%;
+}
+@media (max-width: 992px) {
+  .contact-page {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .contact-page .right-section {
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+  }
+  .contact-page .right-section .container {
+    margin-bottom: 30px;
+    border: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .contact-page .right-section .container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .contact-page .right-section .container h1::after {
+    content: none;
+  }
+  .contact-page .right-section .container h1::before {
+    content: none;
+  }
+  .contact-page .right-section .container p {
+    text-align: center;
+  }
+  .contact-page .right-section .container form {
+    padding: 0;
+  }
+  .contact-page .right-section .container form div {
+    width: 100%;
+  }
+  .contact-page .right-section .container form div input {
+    width: 100%;
+  }
+  .contact-page .right-section .container form button {
+    margin-bottom: 30px;
+  }
+}
+
+.texture-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  color: white;
+}
+@media (max-width: 787px) {
+  .texture-page {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+}
+.texture-page .left-section {
+  width: 50%;
+  background-color: black;
+  position: relative;
+  height: 100%;
+  background-image: url("../../images/homePage/Modern-Minimalist-Chair.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.texture-page .left-section::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.194);
+  animation: changeShadow infinite ease 10s;
+}
+.texture-page .left-section .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+@media (max-width: 787px) {
+  .texture-page .left-section {
+    width: 100%;
+    height: 70vh;
+  }
+}
+.texture-page .right-section {
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 10px;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  border-radius: 15px;
+}
+.texture-page .right-section .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.texture-page .right-section .container ul {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.texture-page .right-section .container ul li {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 217, 0, 0.17);
+  padding: 10px;
+}
+.texture-page .right-section .container ul li a {
+  color: white;
+}
+.texture-page .right-section .container .big-box {
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.texture-page .right-section .container .big-box h1 {
+  margin-bottom: 35px;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+}
+.texture-page .right-section .container .big-box h1::after, .texture-page .right-section .container .big-box h1::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(255, 226, 151, 0.709);
+}
+.texture-page .right-section .container .big-box h1::after {
+  bottom: -10px;
+}
+.texture-page .right-section .container .big-box h1::before {
+  top: -10px;
+}
+.texture-page .right-section .container .big-box .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.texture-page .right-section .container .big-box .boxes .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  width: 90%;
+}
+.texture-page .right-section .container .big-box .boxes .box .img {
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 10px;
+  min-width: 180px;
+}
+.texture-page .right-section .container .big-box .boxes .box .img img {
+  transition: 0.5s;
+  min-width: 100%;
+  width: 180px;
+}
+.texture-page .right-section .container .big-box .boxes .box .img:hover img {
+  transform: scale(1.4) rotate(10deg);
+}
+.texture-page .right-section .container .big-box .boxes .box .up {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 15px;
+}
+.texture-page .right-section .container .big-box .boxes .box .up h4,
+.texture-page .right-section .container .big-box .boxes .box .up span {
+  color: rgb(255, 229, 162);
+}
+.texture-page .right-section .container .big-box .boxes .box p {
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .texture-page .right-section,
+  .texture-page .left-section {
+    width: 100%;
+  }
+  .texture-page .right-section ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .texture-page .right-section .big-box {
+    padding: 0;
+  }
+  .texture-page .right-section .big-box .boxes .box {
+    flex-wrap: wrap;
+  }
+  .texture-page .right-section .big-box .boxes .box .img {
+    width: 100%;
+  }
+  .texture-page .right-section .big-box .boxes .box .img img {
+    min-width: none;
+  }
+}
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  overflow: hidden;
+}
+.home-page .left-section {
+  background-color: black;
+  border-radius: 10px;
+  width: 70%;
+  height: 100%;
+  position: relative;
+  background-image: url("../images/homePage/bg/Luxurious-Leather-Chair-e1764683478234-1-e1767452642404.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: chageBG infinite 20s ease;
+}
+.home-page .left-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 100%;
+}
+.home-page .right-section {
+  background-color: black;
+  width: 30%;
+  height: 100%;
+}
+.home-page .right-section .box {
+  border-radius: 10px;
+  padding: 30px;
+  background-image: url("../images/homePage/Elegant-Wooden-Chair-1.webp");
+  margin-bottom: 20px;
+  height: 31.847133758%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  transition: 1s;
+}
+.home-page .right-section .box h4 {
+  z-index: 1;
+}
+.home-page .right-section .box .btns {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-page .right-section .box .btns .see-more-btn {
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.home-page .right-section .box .btns .see-more-btn::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  top: -2px;
+  right: 0;
+}
+.home-page .right-section .box .btns .see-more-btn:hover ::after {
+  left: 0;
+}
+.home-page .right-section .box .btns button {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 8px 15px;
+  border: 0;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 100%;
+  transition: 0.5s;
+  font-size: 18px;
+}
+.home-page .right-section .box .btns button:hover {
+  border-radius: 20px;
+}
+@media (max-width: 787px) {
+  .home-page .right-section .box {
+    height: 330px;
+  }
+}
+.home-page .right-section .box::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.194);
+  animation: changeShadow infinite ease 10s;
+}
+@media (max-width: 787px) {
+  .home-page {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .home-page .left-section,
+  .home-page .right-section {
+    width: 100%;
+  }
+  .home-page .left-section {
+    height: 70vh;
+  }
+  .home-page .right-section {
+    padding-top: 15px;
+  }
+}
+
+@keyframes chageBG {
+  0%, 100% {
+    background-image: url("../images/homePage/bg/Modern-Leather-Chair-3-e1764696228217.webp");
+  }
+  50% {
+    background-image: url("../images/homePage/bg/Luxurious-Leather-Chair-e1764683478234-1-e1767452642404.jpg");
+  }
+}
+@keyframes changeShadow {
+  0%, 100% {
+    background-color: rgba(0, 0, 0, 0.194);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.574);
+  }
+}/*# sourceMappingURL=main.css.map */

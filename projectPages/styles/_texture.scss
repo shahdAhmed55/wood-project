@@ -1,0 +1,149 @@
+@use "../../styles/global/colors&effects" as *;
+.texture-page {
+  height: 100vh;
+  @include centerElements;
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  color: white;
+  @media (max-width: 787px) {
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  .left-section {
+    width: 50%;
+    background-color: black;
+    position: relative;
+    height: 100%;
+    background-image: url("../../images/homePage/Modern-Minimalist-Chair.webp");
+    @include backgroundSetting;
+    border-radius: 10px;
+    overflow: hidden;
+    &::after {
+      @include shadowEffect;
+      animation: changeShadow infinite ease 10s;
+    }
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90%;
+    }
+    @media (max-width: 787px) {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+
+  .right-section {
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid rgba(255, 217, 0, 0.17);
+    border-radius: 15px;
+    .container {
+      width: 100%;
+      @include centerElements;
+      // display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      ul {
+        display: flex;
+        padding: 15px;
+        gap: 15px;
+        margin-bottom: 30px;
+        li {
+          border-radius: 10px;
+          border: 1px solid rgba(255, 217, 0, 0.17);
+          padding: 10px;
+          a {
+            color: white;
+          }
+        }
+      }
+      .big-box {
+        padding: 10px;
+        margin-bottom: 50px;
+        h1 {
+          margin-bottom: 35px;
+          text-align: center;
+          position: relative;
+          font-size: 20px;
+          @include h1AfterBefore;
+        }
+        .boxes {
+          @include centerElements;
+          flex-direction: column;
+          .box {
+            @include centerElements;
+            margin-bottom: 30px;
+            gap: 20px;
+            width: 90%;
+            .img {
+              transition: 0.5s;
+              overflow: hidden;
+              border-radius: 10px;
+
+              min-width: 180px;
+              img {
+                transition: 0.5s;
+                min-width: 100%;
+                width: 180px;
+              }
+
+              &:hover {
+                img {
+                  transform: scale(1.4) rotate(10deg);
+                }
+              }
+            }
+            .up {
+              justify-content: space-between;
+              display: flex;
+              margin-bottom: 15px;
+              h4,
+              span {
+                color: rgb(255, 229, 162);
+              }
+            }
+            p {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .right-section,
+    .left-section {
+      width: 100%;
+    }
+    .right-section {
+      ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .big-box {
+        padding: 0;
+        .boxes {
+          .box {
+            flex-wrap: wrap;
+            .img {
+              width: 100%;
+
+              img {
+                min-width: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
